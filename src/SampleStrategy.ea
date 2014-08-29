@@ -1,0 +1,26 @@
+/**
+ * User: Harvey
+ * Date: 2014/8/22
+ * Time: 下午 05:03
+ */
+//import java.net.Socket
+
+def id
+
+def void init(){
+    println "init"
+}
+
+def void tick(){
+    println "tick"
+    if(true){
+        id = order.entry(SHORT, 100.5)
+        println "order id : " + id
+    }
+    alive = false
+}
+
+def void end(){
+    order.close(id)
+    println "end"
+}
